@@ -1,52 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <title>Steam | PS5 Relapse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control"
+        content="no-cache, no-store, must-revalidate">
+
+  <title>STEAM | PlayStation Service</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
-      background: #060606;
-      color: #fff;
       margin: 0;
+      min-height: 100%;
+      background: #080808;
+      color: #fff;
       font-family: Arial, Helvetica, sans-serif;
     }
-    .brand {
-      padding: 18px 16px 12px;
-      border-bottom: 1px solid #292929;
-      background: #101010;
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(
+          ellipse at top,
+          #202020 0%,
+          #0b0b0b 50%,
+          #050505 100%
+        );
     }
+
+    .brand {
+      padding: 30px 18px 24px;
+      text-align: center;
+      background: rgba(16, 16, 16, 0.96);
+      border-bottom: 1px solid #303030;
+    }
+
+    .logo {
+      width: 76px;
+      height: 76px;
+      margin: 0 auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #fff;
+      border-radius: 18px;
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
     .brand-name {
       margin: 0;
-      color: #fff;
-      font-size: 24px;
-      letter-spacing: 2px;
-      font-weight: 800;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 5px;
+      direction: ltr;
     }
+
     .brand-subtitle {
-      margin: 6px 0 0;
+      margin: 9px 0 0;
       color: #aaa;
+      font-size: 14px;
+    }
+
+    .services {
+      max-width: 720px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .service {
+      padding: 15px 8px;
+      text-align: center;
+      background: #121212;
+      border: 1px solid #303030;
+      border-radius: 12px;
+      color: #eee;
+      font-size: 14px;
+    }
+
+    .info {
+      max-width: 720px;
+      margin: 20px auto;
+      padding: 0 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .card {
+      padding: 15px;
+      text-align: center;
+      background: #121212;
+      border: 1px solid #303030;
+      border-radius: 12px;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 7px;
+      color: #888;
       font-size: 12px;
     }
+
+    .value {
+      color: #fff;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
     #console {
       padding: 12px 16px;
       white-space: pre-wrap;
       overflow-wrap: anywhere;
+      direction: ltr;
+      text-align: left;
+    }
+
+    .footer {
+      padding: 20px 12px;
+      text-align: center;
+      color: #666;
+      font-size: 12px;
+      border-top: 1px solid #222;
+    }
+
+    @media (min-width: 700px) {
+      .brand {
+        padding: 38px 24px 30px;
+      }
+
+      .brand-name {
+        font-size: 42px;
+      }
+
+      .service {
+        padding: 20px;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header class="brand">
+    <div class="logo">S</div>
+
     <h1 class="brand-name">STEAM</h1>
-    <p class="brand-subtitle">PlayStation Service &amp; Gaming</p>
-    <p class="brand-subtitle">العنوان: سوق فلسطين مقابل مدرسة الهدى — المرج</p>
-    <p class="brand-subtitle">للتواصل: 0927712562</p>
+
+    <p class="brand-subtitle">
+      PlayStation Service &amp; Gaming
+    </p>
   </header>
+
+  <section class="services">
+    <h2 class="section-title">خدمات المحل</h2>
+
+    <div class="service-list">
+      <div class="service">صيانة PlayStation</div>
+      <div class="service">بيع وشراء الأجهزة</div>
+      <div class="service">استبدال الأجهزة</div>
+      <div class="service">تأجير الأجهزة</div>
+      <div class="service">تحميل الألعاب</div>
+      <div class="service">خدمات PS4 و PS5</div>
+    </div>
+  </section>
+
+  <section class="info">
+
+    <div class="card">
+      <span class="label">عنوان المحل</span>
+      <div class="value">
+        سوق فلسطين مقابل مدرسة الهدى — المرج
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="label">رقم الهاتف</span>
+      <div class="value" dir="ltr">
+        0927712562
+      </div>
+    </div>
+
+  </section>
+
   <div id="console"></div>
+
+  <footer class="footer">
+    STEAM — PlayStation Service &amp; Gaming
+  </footer>
+
+  <!-- مسارات ملفات المشروع الأصلية -->
   <script src="./src/firmware.js"></script>
   <script src="./src/main.js"></script>
   <script src="./src/rop.js"></script>
   <script src="./src/utils/syscalls.js"></script>
   <script type="module" src="./src/site.js"></script>
+
 </body>
 </html>
